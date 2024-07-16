@@ -7,12 +7,16 @@
 body{
     background-color: #001331;
 }
+body{
+    background-color: #001331;
+    
+}
 
 :root{
     --text-color:white;
 }
 
-.container{
+.container1{
     margin-top: 45px;
 }
 
@@ -79,9 +83,13 @@ body{
 
 /* section 2 css */
 
+.environment{
+    font-size: 48px;
+}
 
 .section-2{
     display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     color: var(--text-color);
@@ -116,4 +124,9 @@ body{
 .section-3 span{
 
     color: var(--text-color);
+}
+
+
+.alr{
+    display: none;
 }
