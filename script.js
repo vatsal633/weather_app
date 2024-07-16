@@ -18,11 +18,17 @@ async function getweather(city) {
                 const response = await fetch(url);
                 const data = await response.json();
 
-                if(data.cod == 404){
-                        alert("city was not fond or please enter correct value ")
+                if(data.cod!=200){
+                        
+                        document.getElementsByClassName("section-2")[0].style.display = "none"
+                        // alert("city was not fond or please enter correct value ")
+                        document.getElementsByClassName("alr")[0].style.display = "block"
                 }
-                else{
+                
 
+                
+                else{
+                        document.getElementsByClassName("section-2")[0].style.display = "flex"
                         console.log(data)
                         let cityname = data.name
                         let Fahrenheit = (9/5)*data.main.temp + 32
@@ -38,15 +44,24 @@ async function getweather(city) {
                         document.getElementById("date").textContent = formattedDate
                         document.getElementById("humidity").textContent = data.main.humidity + "%"
                         document.getElementById("wind").textContent = data.wind.speed
-                        document.getElementById("weather").textContent = data.weather[0].main
+                        document.getElementsByClassName("environment")[0].textContent = data.weather[0].main
+
+                        let image = document.getElementById("weather_image")
+                        if(data.weather[0].main == "clear"){
+                                image.src = "images\\clear-weather.png"
+                        }
+
+                        else if(data.weather[0].main == "haze"){
+                                image.src = "images\\download-removebg-preview.png"
+                        }
+
+                        else if(data.weather[0].main == "Clouds"){
+                                image.src = "images\\cloud-weather.png"
+                        }
                 }
 
-
-
-
-
         } catch (error) {
-                console.log("facing some error while feaching weather")
+                console.log(error)
         }
 
 
