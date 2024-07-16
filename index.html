@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="main_body">
+                <div class="search_bar">
+                    <input type="text" placeholder="enter your city" id="search">
+                    <button class="search-btn">
+                        search
+
+                    </button>
+                </div>
+                <div class="header">
+                    <h2 id="cityname">
+                        Location
+                    </h2>
+
+                </div>
+
+                <div class="section-1">
+                    <div id="location" class="sec-1-items">
+                        <img src="images\location.svg" alt="location">
+                        <span id="city" class="location-items">City</span>
+                        <span>|</span>
+                        <span id="country" class="location-items">Country</span>
+                    </div>
+                    <div class="date" class="sec-1-items">
+                        <img src="images\calender.svg" alt="date">
+                        <span id="date">date</span>
+
+                    </div>
+                </div>
+
+                <div class="section-2">
+                    <div class="tempreture">
+                        <span id="cel-temp">0°C</span>
+                        <span class="line"></span>
+                        <span id="cel-fah">0°F</span>
+                    </div>
+                    <div class="weather-img">
+                        <img src="images/download-removebg-preview.png" alt="" id="weather_image">
+                    </div>
+                </div>
+
+                <div class="section-3">
+                    <div class="sec-3-header">
+                        <h2>About Weather:</h2>
+                        <h2 id="weather"></h2>
+                    </div>
+                    
+                    <div id="humi">Humidity:<span id="humidity"></span></div>
+
+                 
+                    <div id="wi">Wind:<span id="wind"></span></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
